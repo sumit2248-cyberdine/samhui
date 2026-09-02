@@ -209,3 +209,60 @@ a:hover { text-decoration: underline; }
   .partners-grid { gap: 3rem; }
   .hero { padding: 4.5rem 0 6rem; }
 }
+
+/* WhatsApp button */
+.btn-wa { background: #25d366; color: #fff; box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35); }
+.btn-wa:hover { background: #1eb85a; }
+
+/* Facility band */
+.facility { position: relative; line-height: 0; }
+.facility img { width: 100%; height: min(60vh, 520px); object-fit: cover; }
+.facility::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 41, 64, 0.75), rgba(20, 41, 64, 0) 45%);
+  pointer-events: none;
+}
+.facility-caption {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Section sub-line */
+.section-sub { margin-top: 0.9rem; color: var(--muted); font-size: 1rem; }
+
+/* Category chips */
+.chips { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.6rem; margin-top: 2.2rem; }
+.chips-label { font-weight: 600; color: var(--navy); font-size: 0.92rem; }
+.chip {
+  background: var(--teal-light);
+  color: var(--navy);
+  border: 1px solid rgba(63, 160, 168, 0.35);
+  border-radius: 999px;
+  padding: 0.35rem 0.95rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Four-card grid (sourcing partners) */
+.cards-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Response note */
+.response-note { text-align: center; margin: 1.4rem 0 0; color: var(--muted); font-size: 0.92rem; }
+
+@media (max-width: 1000px) {
+  .cards-4 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+}
+@media (max-width: 640px) {
+  .cards-4 { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; }
+}
