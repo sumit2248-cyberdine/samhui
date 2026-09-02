@@ -51,6 +51,17 @@ a:hover { text-decoration: underline; }
 .btn-nav { background: var(--teal); color: #fff; padding: 0.55rem 1.2rem; }
 .btn-nav:hover { background: #35898f; }
 
+.btn-wa-nav {
+  background: #25d366;
+  color: #fff;
+  padding: 0.55rem 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.btn-wa-nav:hover { background: #1eb85a; }
+.btn-wa-nav svg { width: 17px; height: 17px; fill: currentColor; flex: none; }
+
 /* Header */
 .site-header {
   position: sticky;
@@ -202,6 +213,7 @@ a:hover { text-decoration: underline; }
   .nav-links li { padding: 0.7rem 0; }
   .nav-links a:not(.btn) { display: block; }
   .btn-nav { text-align: center; }
+  .btn-wa-nav { justify-content: center; }
 
   .about-grid { grid-template-columns: 1fr; }
   .cards, .contact-grid { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; }
