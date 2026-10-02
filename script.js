@@ -1,4 +1,30 @@
 document.documentElement.classList.add("js-enabled");
+const themeToggle = document.getElementById("themeToggle");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+let themePreference = null;
+try {
+  const saved = localStorage.getItem("samhui-theme");
+  if (saved === "light" || saved === "dark") themePreference = saved;
+} catch (_) {}
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+  themeToggle.title = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#141d22" : "#123b4a";
+}
+
+applyTheme(themePreference || (systemTheme.matches ? "dark" : "light"));
+themeToggle.hidden = false;
+themeToggle.addEventListener("click", () => {
+  themePreference = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  applyTheme(themePreference);
+  try { localStorage.setItem("samhui-theme", themePreference); } catch (_) {}
+});
+systemTheme.addEventListener("change", (event) => {
+  if (!themePreference) applyTheme(event.matches ? "dark" : "light");
+});
+
 const toggle = document.getElementById("navToggle");
 const links = document.getElementById("navLinks");
 const mobile = window.matchMedia("(max-width: 800px)");
