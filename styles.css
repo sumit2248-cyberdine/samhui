@@ -147,7 +147,7 @@ h3 { font-size: 18px; font-weight: 500; line-height: 1.4; letter-spacing: -.025e
 .footer-brand { font-size: 23px; font-weight: 600; line-height: 1; letter-spacing: .08em; }
 .footer-brand span { display: block; margin-top: 8px; font-size: 8px; font-weight: 400; letter-spacing: .26em; }
 .footer-inner p { color: #c4d2d3; font-size: 11px; }
-.back-to-top { display: inline-flex; align-items: center; gap: 24px; margin-left: auto; font-size: 10px; }
+.back-to-top { display: inline-flex; align-items: center; gap: 24px; min-height: 44px; padding: 8px 0; margin-left: auto; font-size: 11px; }
 .back-to-top span { font-size: 20px; }
 .back-to-top:hover { color: #a6d9d2; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 16px; padding-top: 20px; border-top: 1px solid #42606a; color: #c4d2d3; font-size: 9px; }

@@ -42,6 +42,14 @@ links.addEventListener("focusout", (event) => {
 mobile.addEventListener("change", () => closeNavigation());
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+document.querySelectorAll('a[href="#top"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (location.hash !== "#top") history.pushState(null, "", "#top");
+    document.querySelector(".brand").focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: reducedMotion.matches ? "auto" : "smooth" });
+  });
+});
 if ("IntersectionObserver" in window && !reducedMotion.matches) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
