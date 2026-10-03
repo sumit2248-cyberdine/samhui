@@ -178,6 +178,8 @@ h3 { font-size: 18px; font-weight: 500; line-height: 1.4; letter-spacing: -.025e
 .contact-details a { display: inline-flex; gap: 24px; padding: 4px 0; font-size: 16px; }
 .contact-details a:hover { color: var(--teal); }
 .contact-details address { font-size: 12px; font-style: normal; }
+.contact-details .office-directions { flex-direction: column; gap: 8px; font-size: 12px; }
+.directions-label { display: inline-flex; align-items: center; align-self: flex-start; gap: 8px; padding-bottom: 3px; border-bottom: 1px solid currentColor; color: var(--teal); font-size: 11px; }
 .site-footer { background: var(--deep); color: var(--on-deep); padding: 48px 0 24px; }
 .footer-inner { display: flex; align-items: center; gap: 48px; padding-bottom: 32px; }
 .footer-brand { font-size: 23px; font-weight: 600; line-height: 1; letter-spacing: .08em; }
